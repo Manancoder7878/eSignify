@@ -1,0 +1,51 @@
+<div class="signup-wrapper d-flex justify-content-center align-items-center vh-100">
+    <div class="signup-box d-flex shadow rounded-4">
+        <!-- Left Section (Visual) -->
+        <div class="left-section d-none d-md-block">
+            <img src="assets/images/welcome.png" alt="eSign Background"
+                class="img-fluid h-100 w-100 rounded-start-4" />
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="right-section bg-white p-4 p-md-5 rounded-end-4">
+            <h3 class="mb-1 fw-bold">Get Started</h3>
+            <p class="text-muted">Already have an account? <a routerLink="" class="text-primary">Sign In</a></p>
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div class="form-floating mb-2 custom-input">
+                    <input type="text" class="form-control no-border rounded-0" id="name" formControlName="name" placeholder="Name">
+                    <label for="name">Name</label>
+                    <span [ngStyle]="{'color': 'red'}" class="ms-3" *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">Name is required</span>
+                </div>
+
+                <div class="form-floating mb-2 custom-input">
+                    <input formControlName="email" class="form-control no-border rounded-0" id="email" type="email" placeholder="Email" />
+                    <label for="email">Email</label>
+                    <span [ngStyle]="{'color': 'red'}" class="ms-3" *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">Please enter a valid email</span>
+                </div>
+
+                <div class="form-floating mb-2 custom-input">
+                    <input formControlName="password" class="form-control no-border rounded-0" id="password" type="password" placeholder="Password" />
+                    <label for="password">Password</label>
+                    <span [ngStyle]="{'color': 'red'}" class="ms-3" *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">Password must be at least 8 characters long</span>
+                </div>
+
+                <div class="form-floating mb-2 custom-input">
+                    <input formControlName="confirmPassword" class="form-control no-border rounded-0" id="cpassword"  type="password"
+                        placeholder="Confirm Password" />
+                        <label for="cpassword">Confirm Password</label>
+                        <span [ngStyle]="{'color': 'red'}" class="ms-3" *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPassword')?.touched">Passwords do not match</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-2" [ngStyle]="{'background-color':'black'}" (click)="onClick()">Sign Up</button>
+            </form>
+
+            <div class="text-center mt-3">Or sign up with</div>
+            <div class="d-flex justify-content-center gap-3 mt-2">
+                <img src="assets/icons/google.png" alt="Google" width="20" />
+                <img src="assets/icons/twitter.png" alt="Twitter" width="20" />
+                <img src="assets/icons/facebook.png" alt="Facebook" width="20" />
+            </div>
+        </div>
+    </div>
+</div>

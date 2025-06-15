@@ -1,0 +1,40 @@
+.no-border {
+  border: none;
+  border-bottom: 2px solid #5445f9; /* Optional underline */
+  border-radius: 0px;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+.signup-wrapper {
+  background: linear-gradient(to right, #e9f5ff, #d8f3ff);
+}
+
+.signup-box {
+  max-width: 1100px;
+  width: 100%;
+  min-height: 500px;
+}
+
+.left-section {
+  width: 50%;
+  background-color: #daf0ff;
+  overflow: hidden;
+}
+
+.right-section {
+  width: 50%;
+}
+
+input.form-control {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
