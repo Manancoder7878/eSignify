@@ -8,6 +8,6 @@ import { User } from '../Model/User';
 export class SignupServiceService {
   http = inject(HttpClient)
   registerUser(user:User){
-    return this.http.post<User>("",user)
+    return this.http.post<User>("https://localhost:7292/api/Register/register",user)
   }
 }

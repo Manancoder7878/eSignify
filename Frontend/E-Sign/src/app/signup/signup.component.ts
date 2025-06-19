@@ -41,10 +41,9 @@ export class SignupComponent implements OnInit {
   }
 
   onClick():void{
-    this.router.navigate([""])
     if(this.signupForm.valid){
       this.signupServ.registerUser(this.signupForm.value).subscribe(i => console.log("User Registered Successfully")
-      )
+    )}
+    this.router.navigate(["login"])
     }
   }
-}
