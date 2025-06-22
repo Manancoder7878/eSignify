@@ -1,0 +1,81 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  border-color: #4338ca;
+}
+
+.btn-outline-secondary {
+  border-color: #ddd;
+  color: #333;
+  background-color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f0f0f0;
+}
+
+.shadow {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.toast-container {
+  position: fixed !important;
+  z-index: 99999 !important;
+  top: 12px !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+.toast-container .ngx-toastr {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  padding: 16px 20px 16px 50px;
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  color: white;
+}
+
+/* Success */
+.toast-success {
+  background-color: #28a745 !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 16 16"><path d="M16 2L6 14 0 8l2-2 4 4L14 0z"/></svg>');
+}
+
+/* Error */
+.toast-error {
+  background-color: #dc3545 !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM7 4h2v5H7V4zm0 6h2v2H7v-2z"/></svg>');
+}
