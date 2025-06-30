@@ -12,5 +12,6 @@ namespace Backend.Model
         public string Email { get; set; }
         [Required]
         public string PasswordHash { get; set; }
+        public List<Document> Documents { get; set; } = new List<Document>();
     }
 }

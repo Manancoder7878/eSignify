@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/document/upload": {
+      "post": {
+        "tags": [
+          "Document"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Register/login": {
       "post": {
         "tags": [
