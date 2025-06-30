@@ -1,0 +1,50 @@
+body {
+  background: #f8f9fa;
+}
+
+.card {
+  border-radius: 15px;
+  border-color: white;
+}
+
+.table img {
+  border-radius: 10px;
+}
+
+.circle-indicator {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-succes {
+  background-color: #b2eddf !important; /* soft green */
+  color: #008767;
+  border-color: #008767;
+  border: 1.5px solid #00a97f;
+  padding: 3% 9%;
+}
+
+.bg-info {
+  background-color: #bae3ff !important; /* soft blue */
+}
+
+.bg-danger {
+  background-color: #FFC5C5 !important; 
+  color: #DF0404;
+  border-color: #DF0404 ;
+  border: 1.5px solid #DF0404;
+  padding: 3% 8%;/* soft pink */
+}
+.dropdown-toggle{
+  background-color: #ebf0fa;
+  color: #7e7e7e;
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+}
+

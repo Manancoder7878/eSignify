@@ -1,1 +1,122 @@
-<p>agreements works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 bg-white shadow-sm vh-100 d-flex flex-column p-3">
+            <img src="assets/images/logo.png" alt="" width="140px" class="position-relative top-0 start-0">
+            <h5>Documents</h5>
+            <button class="btn btn-primary mb-4 w-100">Create</button>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">📦 Product</li>
+                <li class="nav-item mb-2">👥 Customers</li>
+                <li class="nav-item mb-2">💰 Income</li>
+                <li class="nav-item mb-2">📣 Promote</li>
+                <li class="nav-item mb-2">❓ Help</li>
+            </ul>
+            <div class="mt-auto"><img src="assets/icons/logout.png" alt="" width="25" class="me-2"><a href=""
+                    [ngStyle]="{color:'black'}">Logout</a></div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div class="col-md-10 p-4 bg-light">
+            <h4 class="ms-3">Hello Evano 👋</h4>
+
+            <div class="bg-white m-3 p-4 rounded-4 shadow-sm">
+                <div class="d-flex justify-content-evenly gap-2">
+                    <!-- Total Documents -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="circle-indicator" style="background: linear-gradient(#D3FFE7,#EFFFF6);"><img
+                                src="assets/icons/document.png" alt="" width="32"></div>
+                        <div>
+                            <p class="mb-1 text-muted small">Total Documents</p>
+                            <h5 class="fw-bold m-0">$198k</h5>
+                        </div>
+                    </div>
+                    <div class="vr"></div>
+                    <!-- Signed -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="circle-indicator" style="background: linear-gradient(#CAF1FF,#CDF4FF);"><img
+                                src="assets/icons/signed.png" alt="" width="35"></div>
+                        <div>
+                            <p class="mb-1 text-muted small">Signed</p>
+                            <h5 class="fw-bold m-0">$2.4k</h5>
+                        </div>
+                    </div>
+                    <div class="vr"></div>
+                    <!-- Unsigned -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="circle-indicator" style="background: linear-gradient(#FFA3CF,#FFD4F3);"><img
+                                src="assets/icons/unsigned.png" alt="" width="35"></div>
+                        <div>
+                            <p class="mb-1 text-muted small">Unsigned</p>
+                            <h5 class="fw-bold m-0">$89k</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Document Table -->
+            <div class="card shadow-sm m-3 bg-white rounded-4">
+                <div class="card-header bg-white border-0 rounded-4 mt-2">
+                    <h5>Documents</h5>
+                    <div><input type="text" placeholder="Search" class="form-control" style="background-color: #ebf0fa;"></div>
+                </div>
+                <div class="ms-2">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td style="color: #B5B7C0;">Document Name</td>
+                                <th><button class="btn dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Status
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Signed</a></li>
+                                        <li><a class="dropdown-item" href="#">Unsigned</a></li>
+                                    </ul>
+                                </th>
+                                <th><button class="btn dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Created Date
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Signed</a></li>
+                                        <li><a class="dropdown-item" href="#">Unsigned</a></li>
+                                    </ul></th>
+                                <th><button class="btn dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Signed Date
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Signed</a></li>
+                                        <li><a class="dropdown-item" href="#">Unsigned</a></li>
+                                    </ul></th>
+                                <td style="color: #B5B7C0;">Download</td>
+                                <td style="color: #B5B7C0;">Delete</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let doc of documents">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img [src]="doc.image" alt="img" class="me-2" width="50" height="50" />
+                                        <div>
+                                            <strong>{{ doc.title }}</strong>
+                                            <div class="text-muted">{{ doc.desc }}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><button [class]="getStatusClass(doc.status)">{{doc.status}}</button></td>
+                                <td>{{ doc.price }}</td>
+                                <td>{{ doc.date }}</td>
+                                <td><img src="assets/icons/download.png" alt="" width="30"></td>
+                                <td><img src="assets/icons/delete.png" alt="" width="30"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
